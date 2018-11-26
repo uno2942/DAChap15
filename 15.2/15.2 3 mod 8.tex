@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx, amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{kotex}
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+\usepackage{tikz-cd}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{mathtools}
+
+
+\textwidth 6.5 truein 
+\oddsidemargin 0 truein 
+\evensidemargin -0.50 truein 
+\topmargin -.5 truein 
+\textheight 8.5in
+\setlist[enumerate]{align=left}
+
+\DeclareMathOperator{\cc}{\mathbb{C}}
+\DeclareMathOperator{\zz}{\mathbb{Z}}
+\DeclareMathOperator{\rr}{\mathbb{R}}
+\DeclareMathOperator{\bA}{\mathbb{A}}
+\DeclareMathOperator{\fra}{\mathfrak{a}}
+\DeclareMathOperator{\frb}{\mathfrak{b}}
+\DeclareMathOperator{\frm}{\mathfrak{m}}
+\DeclareMathOperator{\frp}{\mathfrak{p}}
+\DeclareMathOperator{\slin}{\mathfrak{sl}}
+\DeclareMathOperator{\Lie}{\mathsf{Lie}}
+\DeclareMathOperator{\Alg}{\mathsf{Alg}}
+\DeclareMathOperator{\Spec}{\mathrm{Spec}}
+\DeclareMathOperator{\End}{\mathrm{End}}
+\DeclareMathOperator{\rad}{\mathrm{rad}}
+\newcommand{\Ass}{\text{Ass}_R}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\Sch}{\mathbf{Sch}}
+\newcommand{\I}{\mathcal{I}}
+\newcommand{\Z}{\mathcal{Z}}
+\newcommand{\tensorp}{\bigotimes}
+\newcommand{\isomorp}{\cong}
+\newcommand{\Ring}{\mathbf{Ring}}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+
+
+\begin{document}
+
+
+%%\title{Financial Management HW - 1} 
+%%\author{SungBin Park, 20150462}
+%%\maketitle
+\section*{Dummit\&Foote Abstract Algebra section 15.2 Solutions for Selected Problems by 3 mod(8)}
+SungBin Park, 20150462
+\begin{enumerate}
+\item[3.] This is exactly same as exercise 2 (c) since $\rad(I\cap J)=\rad I\cap \rad J=I\cap J$ if $I$, $J$ are radical ideal.
+\newpage
+\item[11.]
+Assume that $V\cap U_1\neq \phi$ and $V\cap U_2\neq \phi$, but $V\cap U_1\cap U_2=\phi$. Then,
+\begin{equation*}
+V\cap\left(U_1\cap U_2\right)=\phi \Leftrightarrow V=V\cap\left(U_1\cap U_2\right)^c=V\cap\left(U_1^c\cup U_2^c\right)=\left(V\cap U_1^c\right)\cup \left(V\cap U_2^c\right).
+\end{equation*}
+If $\left(V\cap U_1^c\right)\neq \phi$ and $\left(V\cap U_2^c\right)\neq \phi$, then  it is contradiction to irreducibility of $V$ since $(U^c_1\cap V)$ and $(U^c_2\cap V)$ is proper algebraic sets in $V$.  If $(V\cap U^c_1)=V$, then $U_2=\phi$ and $V\cap U_2=\phi$ which is contradiction. This is same for $U_2$. Therefore, $V\cap U_1\cap U_2\neq \phi$.
+
+Let $U$ be an nonempty open set in a variety $V$ and assume $\overline{U}$ is proper in $V$. Then, $V\setminus \overline{U}$ is open in $V$ which is nonempty and $V\cap U\cap \left(V\setminus \overline{U}\right)=\phi$, which is contradiction. Therefore, $\overline{U}=V$.
+\newpage
+\item[19.] Let $V=\{(x,y)\in \rr^2|x^2+y^2-1=0\}$ in $\rr^2$ and $W=\rr$. Let $\varphi:V\rightarrow W$ such that $\varphi(x,y)=x$. Then, this is not surjective since projection of $V$ to $x$-axis is $[-1, 1]$. The k-algebra homomorphism $\tilde{\varphi}:k[x]\rightarrow k[V]$, $\tilde{\varphi}:x\mapsto x$. is definitely injective.
+\newpage
+\item[27.]
+I'll start with lemma about topology.
+\begin{lemma}
+$X$ is Hausdorff iff diagonal set $\Delta=\{(x,x)|x\in X\}$ is closed in product topology.
+\end{lemma}
+\begin{proof}
+If $X$ is Hausdorff, then for any $(x,y)$, $x\neq y$, there exist two disjoint open sets $x\in U$, $y\in V$ and $(x,y)\in U\times V$ is disjoint with $\Delta$. Therefore, $\Delta$ is closed.
+
+Conversely, suppose that $\Delta$ is closed, then for any $(x,y)$, $x\neq y$, there exists open set containing $(x,y)$ disjoint with $\Delta$. By the definition of product topology, there exist two disjoint open set $x\in U$, $y\in V$. Therefore, $X$ is Hausdorff space.
+\end{proof}
+Consider $\Z((y-x))$ in $k^2$. This is diagonal set in $k^2$ and closed by the definition of Zarisky topology. However, this is not closed in product topology of $k^2$ since Zarisky topology on $k$ is not Hausdorff: all the polynomials on $k[x]$ has finitely many roots, which means this is co-finite topology.
+\newpage
+\item[35.]
+\begin{enumerate}
+\item[(a)] I'll first prove that $\varphi(Q_1\cap \cdots \cap Q_m)=\varphi(Q_1)\cap \cdots \varphi(Q_m)$.
+
+$(\subset)$: Let $a\in \varphi(Q_1\cap \cdots \cap Q_m)$, then there exists $b\in Q_1\cap \cdots \cap Q_m$ such that $\varphi(b)=a$. Therefore, $a=\varphi(b)\in \varphi(Q_1)\cap \cdots \varphi(Q_n)$.
+
+$(\supset)$: Let $\varphi(Q_1\cap \cdots \cap Q_m)\not\supset\varphi(Q_1)\cap \cdots \varphi(Q_m)$, then there exists $a_1,a_2\in Q_1\cup \cdots\cup Q_m$ such that $a_1\notin Q_k$ and $a_2\in Q_k$ for some $k$ and $\varphi(a_1)=\varphi(a_2)$. Then, $\varphi(a_1-a_2)=0$ and $a_1-a_2\in \ker\varphi\subset Q_k$, which is contradiction. Therefore $\varphi(Q_1\cap \cdots \cap Q_m)\supset\varphi(Q_1)\cap \cdots \varphi(Q_m)$.
+
+Therefore, $\varphi(Q_1\cap \cdots \cap Q_m)=\varphi(Q_1)\cap \cdots \varphi(Q_m)$. Using previous exercise, $\rad\varphi(Q_i)=\varphi(P_i)$ which is prime ideal in $S$.
+
+Consider isomorphism $\overline{\varphi}:R/\ker\varphi\rightarrow S$ and $\overline{Q_i}=Q_i/\ker\varphi$. Then, $\varphi(Q_i)\simeq \overline{\varphi}(\overline{Q_i})$. By lattice isomorphism theorem, $Q_i\nsupseteq \cap_{j\neq i}Q_j$ for all $j$ implies $\overline{Q_i}\nsupseteq \cap_{j\neq i}\overline{Q_j}$ and $\varphi(Q_i)\nsupseteq \cap_{j\neq i}\varphi(Q_j)$. Also, $P_i\neq P_j$ for $i\neq j$ implies $\varphi(P_i)\neq \varphi(P_j)$ for $i\neq j$ by the same reason. Therefore, this primary decomposition is minimal.
+
+\item[(b)]I'll first prove that $\varphi^{-1}(I)=\varphi^{-1}(Q_1)\cap \cdots\cap \varphi^{-1}(Q_m)$. Let $b\in \varphi^{-1}(I)$, then there exists $a\in I$ such that $\varphi(b)=a$. It means $a\in Q_1\cap \cdots \cap Q_m$ and $a\in \varphi^{-1}(Q_1)\cap\cdots\cap\varphi^{-1}(Q_m)$. Conversely, let $b\in \varphi^{-1}(Q_1)\cap\cdots\cap \varphi^{-1}(Q_m)$, then there exists $a_i$ in $Q_i$ such that $\varphi(a_i)=b$. Since $\varphi(a_i-a_j)=0$, $a_i-a_j\in \varphi^{-1}(0)=\ker\varphi\subset \varphi^{-1}(Q_1)\cap\cdots\cap\varphi^{-1}(Q_m)$ for all $j$, $a_i\in Q_1\cap\cdots\cap Q_m$ and $a_i\in \varphi^{-1}(I)$.(By exercise 24 in Section 7.3, $\varphi^{-1}(J)$ is an ideal containing $\ker\varphi$ for any ideal $J$ in $S$.) Hence, $\varphi^{-1}(I)=\varphi^{-1}(Q_1)\cap\cdots\cap\varphi^{-1}(Q_m)$.
+
+By exercise 13 in Section 7.4, $\varphi^{-1}(P)=R$ or $\varphi^{-1}(P)$ is a prime ideal of $R$ for any prime ideal $P$ in $S$. Therefore, $\rad\varphi(Q_i)\subset \varphi(P_i)$ since $\rad\varphi(Q_i)$ is the intersection of all prime ideals containing $\rad\varphi(Q_i)$. Conversely, let $a\in \varphi^{-1}(P_i)$, then $\varphi(a)\in P_i$ and $\left(\varphi(a)\right)^n\in P_i^n \subset Q_i$ for some $i$. Therefore, $a\in \rad\varphi^{-1}(Q_i)$ and $\rad\varphi^{-1}(Q_i)=\varphi^{-1}(P_i)$. Hence, $\varphi^{-1}(I)=\varphi^{-1}(Q_1)\cap \cdots\varphi^{-1}(Q_m)$ is primary decomposition of $\varphi^{-1}(I)$. 
+
+If $\varphi$ is surjective, $\varphi^{-1}(P_i)\neq R$ and there is no substitution on the decomposition. If $\varphi^{-1}(P_i)=\varphi^{-1}(P_j)$ for $i\neq j$, then $\varphi(\varphi^{-1}(P_i))=P_i=P_j=\varphi(\varphi^{-1}(P_i))$, so $P_i\neq P_j$ for $i\neq j$. By the same reason, $\varphi^{-1}(Q_i)\nsupseteq \cap_{j\neq i}\varphi^{-1}(Q_j)$ for all $i$. Therefore, this is minimal primary decomposition.
+\end{enumerate}
+\newpage
+\item[43.]
+($\Leftarrow$) Let $I=P_1\cap \cdots \cap P_m$ be a minimal primary decomposition such that $P_i$ are prime ideals. For $a\in \rad I$, there exists integer $k$ such that $a^k\in P_1\cap \cdots \cap P_m$ and it means $a\in P_1\cap \cdots \cap P_m$ since all the components are prime ideal. Therefore, $a\in I$ and $I$ is a radical ideal.
+
+($\Rightarrow$) I'll follow the hint.
+
+Let $I=Q_1\cap \cdots \cap Q_m$ is radical with $Q_i$ a $P_i$-primary component of a minimal decomposition. Since $Q_i$ are primary, there exists $n_i$ such that $P_i^{n_i}\subset Q_i\subset P_i$. Fix $a\in P_1\cap \cdots \cap P_m$, then $a^{\max\{n_1, \ldots, n_m\}}\in Q_1\cap \cdots\cap Q_m=I$. Hence, $a\in I$ since $I$ is radical. It implies $P_1\cap \cdots \cap P_m \subset I \subset P_1\cap \cdots \cap P_m$ and $I=P_1\cap \cdots \cap P_m$.
+
+I need to show that this is a minimal primary decomposition. Fix arbitrary $i$, then there exists $b\notin Q_i$ such that $b\in Q_j$ for $j\neq i$. Let's assume that $b\in \rad Q_i=P_i$, then $b\in \bigcap_{i} P_i=I$, but it means $b\in Q_i$ by the construction of $I$. Therefore, $b\notin P_i$ and $b\in P_j$ for $j\neq i$. Since all $P_i$ are distinct, $I=P_1\cap \cdots \cap P_m$ is minimal primary decomposition. 
+
+If $a\in P_i$, then $ab\in P_i$ and $ab\in I$. Thus, $ab\in Q_i$ and $a^k \in Q_i$ for some $k$ since $b\notin P_i$. I couldn't find a reason for $a\in Q_i$, but I'll assume it for further step.
+
+Therefore, $Q_i=P_i$. So, the primary components of a minimal primary decomposition are all prime ideals.
+
+Let $I=P_1\cap \cdots \cap P_m=P'_1\cap \cdots P'_{m'}$, $P$ are prime ideals, and $I$ is a radical ideal. By the minimality of primary decomposition, $\{P_1, \ldots, P_m\}=\{P'_1, \ldots, P'_{m'}\}$ and it means $m=m'$ and $P'_1\cap \cdots P'_{m'}$ is just a permutation of $P_1\cap \cdots \cap P_m$. Therefore, the minimal primary decomposition is unique.
+\end{enumerate}
+
+\end{document}
