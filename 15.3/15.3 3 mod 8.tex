@@ -65,35 +65,35 @@ Using the ring isomorphism $\varphi:k[x,y]/(x^i-y^j)\rightarrow \Im\varphi$, we 
 
 For $p(x,y)$ in the quotient field of $k[x,y]/(x^i-y^j)$, which is a root of monic polynomial $f(z)$ in $\left(k[x,y]/(x^i-y^j)\right)[z]$, $\tilde{\varphi}(p(x,y))\in k(t)$ is again a root of monic polynomial $\tilde{\varphi}(f(z))\in \left(\Im \varphi\right)[z]$ sending $z\mapsto z$ and this is true for vice versa. Therefore, the normalization of $k[x,y]/(x^i-y^j)$ is isomorphic to the normalization of $\Im\varphi$.
 
-Hence, the normalization of the integral domain $R$ is $k\left[\frac{x^{a}}{y^{b}}\right]/(x^i-y^j)$.
+Hence, the normalization of the integral domain $R$ is $k\left[\frac{\bar{x}^{a}}{\bar{y}^{b}}\right]$ for $\bar{x}=x+(x^i-y^j)$, $\bar{y}=y+x+(x^i-y^j)$.
 
-(1): It is clear that the kernel of $\phi$ contains $(x^i-y^j)$. For $\overline{f(x,y)}\in k[x,y]/(x^i-y^j)$, we can rewrite it as $\sum\limits_{i=0}^{j-1} y^i f_i(x)$ for some $f_i(x)\in k[x]$ since $y^j=x^i$. $\varphi(x^r y^s)=t^{rj-si}$ for $0\leq s\leq j-1$ are all distinct since $i$ and $j$ are co-prime. Therefore, $\tilde{\varphi}:k[x,y]/(x^i-y^j)\rightarrow k[t]$ is injective and $(x^i-y^j)$ is the kernel of $\varphi$.
+(1): It is clear that the kernel of $\varphi$ contains $(x^i-y^j)$. For $\overline{f(x,y)}\in k[x,y]/(x^i-y^j)$, we can rewrite it as $\sum\limits_{i=0}^{j-1} y^i f_i(x)$ for some $f_i(x)\in k[x]$ since $y^j=x^i$. $\varphi(x^r y^s)=t^{rj-si}$ for $0\leq s\leq j-1$ are all distinct since $i$ and $j$ are co-prime. Therefore, $\tilde{\varphi}:k[x,y]/(x^i-y^j)\rightarrow k[t]$ is injective and $(x^i-y^j)$ is the kernel of $\varphi$.
 \newpage
 
 
-\item[11.] Since $k[x]$ is U.F.D., there exists monic irreducible polynomials $q^1_i(x)$, $q^2_j(x)$ and units $u^1,u^2$ such that $a(x)=u^1\prod_{i=1}^n q^1_i(x)$, $b(x)=u^2\prod_{j=1}^m q^2_j(x)$. Fix an irreducible factor $q(x)$, then there is a root $\alpha$ which is integral over $R$ since $\alpha$ is a root of $p(x)$. By exercise 10 above, $q(x)\in R[x]$. It means $a(x),b(x)\in R[x]$. (As $p(x)$, $a(x)$, $b(x)$ are monic, $u^1=u^2=1$.)
+\item[11.] Since $k[x]$ is U.F.D., there exists monic irreducible polynomials $q^1_i(x)$, $q^2_j(x)$ and units $u^1,u^2$ such that $a(x)=u^1\prod_{i=1}^n q^1_i(x)$, $b(x)=u^2\prod_{j=1}^m q^2_j(x)$. Fix an irreducible factor $q(x)$ in the factorization, then there is a root $\alpha$ which is integral over $R$ since $\alpha$ is a root of $p(x)$. By exercise 10 above, $q(x)\in R[x]$. It means $a(x),b(x)\in R[x]$. (As $p(x)$, $a(x)$, $b(x)$ are monic, $u^1=u^2=1$.)
 \newpage
 
 
 \item[19.]
-Computing reduced Gr\"obner basis using computer for $(x^3+y^3+z^3, x^2+y^2+z^2, (x+y+z)^3, 1-tx)$ in ordering $x>y>z>t$, it produces $(1)$. In the algorithm computing Gr\"obner basis, there is no multiplication of constant not appearing in the polynomial, i.e., we only multiply integers having $2$ or $3$ as a factor since the coefficient in $(x^3+y^3+z^3, x^2+y^2+z^2, (x+y+z)^3, 1-tx)$ are just $1, -1, 3,6$. It means if $\text{ch}(k)\neq 2,3$, then the polynomial does not lose their terms in Gr\"obner basis algorithm, and we safely get $(1)$ as a reduced Gr\"obner basis for $(x^3+y^3+z^3, x^2+y^2+z^2, (x+y+z)^3, 1-tx)$. By the symmetry, we also get $(1)$ as the reduced Gr\"obner basis for $(x^3+y^3+z^3, x^2+y^2+z^2, (x+y+z)^3, 1-ty)$, $(x^3+y^3+z^3, x^2+y^2+z^2, (x+y+z)^3, 1-tz)$ and it means $x,y,z\in \rad I$.
+Computing reduced Gr\"obner basis using computer for $(x^3+y^3+z^3, x^2+y^2+z^2, (x+y+z)^3, 1-tx)$ in ordering $x>y>z>t$, it produces $(1)$. In the algorithm computing Gr\"obner basis, there is no multiplication of constant not appearing in the coefficient of the polynomials, i.e., we only multiply integers having $2$ or $3$ as prime factors since the coefficient in $(x^3+y^3+z^3, x^2+y^2+z^2, (x+y+z)^3, 1-tx)$ are just $1, -1, 3,6$. It means if $\text{ch}(k)\neq 2,3$, then the polynomial does not lose their terms in Gr\"obner basis algorithm, and we safely get $(1)$ as a reduced Gr\"obner basis for $(x^3+y^3+z^3, x^2+y^2+z^2, (x+y+z)^3, 1-tx)$. By the symmetry, we also get $(1)$ as the reduced Gr\"obner basis for $(x^3+y^3+z^3, x^2+y^2+z^2, (x+y+z)^3, 1-ty)$, $(x^3+y^3+z^3, x^2+y^2+z^2, (x+y+z)^3, 1-tz)$ and it means $x,y,z\in \rad I$.
 \newpage
 
 
 \item[27.] \begin{enumerate}\item[(a)]
-By exercise 26 (d) above, we know that $\Z_{\bar{k}}(I)$ is finite. I'll write $a^i=(a_1^i, a_2^i, \ldots, a_n^i)$ for $a^i\in \Z_{\bar{k}}(I)$. For $a^i\in  \Z_{\bar{k}}(I)$, $\I_{\bar{k}}(a^i)=(x-a^i_1, x-a^i_2, \ldots, x-a^i_n)$, so $\I_{\bar{k}}\left(\Z_{\bar{k}}(I)\right)=\rad I'=\bigcap_i (x-a^i_1, x-a^i_2, \ldots, x-a^i_n)=\prod_i (x-a^i_1, x-a^i_2, \ldots, x-a^i_n)$ since each ideals is maximal. By Chinese Remainder Theorem,
+By exercise 26 (d) above, we know that $\Z_{\bar{k}}(I)$ is finite. Let $m=\abs{\Z_{\bar{k}}(I)}$. I'll write $a^i=(a_1^i, a_2^i, \ldots, a_n^i)$ for $a^i\in \Z_{\bar{k}}(I)$. For $a^i\in  \Z_{\bar{k}}(I)$, $\I_{\bar{k}}(a^i)=(x-a^i_1, x-a^i_2, \ldots, x-a^i_n)$, so $\I_{\bar{k}}\left(\Z_{\bar{k}}(I)\right)=\rad I'=\bigcap_{i=1}^m (x-a^i_1, x-a^i_2, \ldots, x-a^i_n)=\prod_{i=1}^m (x-a^i_1, x-a^i_2, \ldots, x-a^i_n)$ since each ideals is maximal. By Chinese Remainder Theorem,
 \begin{equation*}
 \begin{split}
 \bar{k}[x_1, \ldots, x_n]&/\rad I'\\
 &\cong \bar{k}[x_1, \ldots, x_n]/(x-a^1_1, \ldots, x-a^1_n) \times \cdots \times \bar{k}[x_1, \ldots, x_n]/(x-a^m_1, \ldots, x-a^m_n)\\
-&\cong k^m.
+&\cong \bar{k}^m.
 \end{split}
 \end{equation*}
 Therefore, $\abs{\Z_{\bar{k}}(I)}=\dim_{\bar{k}}\bar{k}[x_1, x_2, \ldots, x_n]/\rad I'$.
 \item[(b)] \begin{enumerate}
 \item Since $k\subset \bar{k}$, $\Z(I)\subset \Z_{\bar{k}}(I)$. 
 \item By exercise 43 in Section 1, $\dim_k k[x_1, \ldots, x_n]/I=\dim_{\bar{k}} \bar{k}[x_1, \ldots, x_n]/I'$.
-\item Since $\rad I'\supset I'$, $\dim_{\bar{k}} \bar{k}[x_1, \ldots, x_n]/\rad I'\leq \dim_{\bar{k}} \bar{k}[x_1, \ldots, x_n]/ I'$: If $(\bar{b}_1, \bar{b}_2, \ldots, \bar{b}_m)$ is a linearly independent set in $\bar{k}[x_1, \ldots, x_n]/\rad I'$, but $\sum_{i=1}^m k_i b_i \in I'$, then $\sum_{i=1}^m k_i b_i\in \rad I'$ and makes contradiction.
+\item Since $\rad I'\supset I'$, $\dim_{\bar{k}} \bar{k}[x_1, \ldots, x_n]/\rad I'\leq \dim_{\bar{k}} \bar{k}[x_1, \ldots, x_n]/ I'$: If $(\bar{b}_1, \bar{b}_2, \ldots, \bar{b}_m)$ is a linearly independent set in $\bar{k}[x_1, \ldots, x_n]/\rad I'$, but $\sum_{i=1}^m k_i b_i \in I'$ for $\{k_i\}\in k$, then $\sum_{i=1}^m k_i b_i\in \rad I'$ and makes contradiction.
 \end{enumerate}
 Combining these facts, we can get $\abs{\Z(I)}\leq \dim_k k[x_1, \ldots, x_n]/I$.
 \end{enumerate}
