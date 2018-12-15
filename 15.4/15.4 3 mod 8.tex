@@ -64,22 +64,22 @@ $\varphi(R[x_1,\ldots, x_i]+I[x_1,\ldots, x_n])=\varphi(R[x_1,\ldots, x_i])=\var
 
 ($\varphi^{-1}\left((R/I)[x_1, \ldots, x_i]\right)\subset R[x_1,\ldots, x_i]+I[x_1,\ldots, x_n]$): 
 
-Let $\varphi(p)\in (R/I)[x_1, \ldots, x_i]$ for some $p\in R[x_1, \ldots, x_n]$. Then, all the terms of $p$ having one of $x_{i+1}, \ldots, x_n$ should have coefficient in $I$, unless $\varphi(p)$ have nonzero terms having one of $x_{i+1}, \ldots, x_n$, so $\varphi(p)\notin (R/I)[x_1, \ldots, x_i]$, which is contradiction. Therefore, there exists $q\in I[x_1, \ldots, x_n]$ such that $p-q\in R[x_1, \ldots, x_n]$ and $p\in R[x_1,\ldots, x_i]+I[x_1,\ldots, x_n]$.
+Let $\varphi(p)\in (R/I)[x_1, \ldots, x_i]$ for some $p\in R[x_1, \ldots, x_n]$. Then, all the terms of $p$ having one of $x_{i+1}, \ldots, x_n$ should have coefficient in $I$, unless $\varphi(p)$ have nonzero terms having one of $x_{i+1}, \ldots, x_n$, so $\varphi(p)\notin (R/I)[x_1, \ldots, x_i]$, which is contradiction. Therefore, there exists $q\in I[x_1, \ldots, x_n]$ such that $p-q\in R[x_1, \ldots, x_i]$ and $p\in R[x_1,\ldots, x_i]+I[x_1,\ldots, x_n]$.
 \item[(b)] ($\varphi(A\cap R[x_1, \ldots, x_i])\subset \overline{A}\cap (R/I)[x_1, \ldots, x_i]$):
 
 $\varphi(A)=\overline{A}$ and $\varphi(R[x_1,\ldots, x_i])=(R/I)[x_1, \ldots, x_i]$, so $\varphi(A\cap R[x_1, \ldots, x_i])\subset \overline{A}\cap (R/I)[x_1, \ldots, x_i]$.
 
 ($\varphi(A\cap R[x_1, \ldots, x_i])\supset \overline{A}\cap (R/I)[x_1, \ldots, x_i]$):
 
-Let $\bar{p}\in \overline{A}\cap (R/I)[x_1, \ldots, x_i]$ since $\overline{A}\cap (R/I)[x_1, \ldots, x_i]\neq \phi$ because it contains $0$. Let's write $\bar{p}=\sum\limits_{\alpha} \bar{r}_\alpha x^\alpha$, $\alpha$ is multiindex, such that $\bar{r}_\alpha\in R/I$ and there is no terms containing $x_{i+1}, \ldots, x_n$ since $\bar{p}\in (R/I)[x_1, \ldots, x_i]$. Take $p=\sum\limits_{\alpha} r_\alpha x^\alpha$. Then, $\varphi(p)=\bar{p}$, $p\in \varphi^{-1}(\overline{A})=A$, $p\in R[x_1, \ldots, x_i]$. Therefore, $\varphi(A\cap R[x_1, \ldots, x_i])\supset \overline{A}\cap (R/I)[x_1, \ldots, x_i]$.
+Let $\bar{p}\in \overline{A}\cap (R/I)[x_1, \ldots, x_i]$ since $\overline{A}\cap (R/I)[x_1, \ldots, x_i]\neq \phi$ because it contains $0$. Let's write $\bar{p}=\sum\limits_{\alpha} \bar{r}_\alpha x^\alpha$, $\alpha$ is multiindex, such that $\bar{r}_\alpha\in R/I$ and there is no terms containing $x_{i+1}, \ldots, x_n$ since $\bar{p}\in (R/I)[x_1, \ldots, x_i]$. Take $p=\sum\limits_{\alpha} r_\alpha x^\alpha$. Then, $\varphi(p)=\bar{p}$, $p\in \varphi^{-1}(\overline{A})=A$, $p\in R[x_1, \ldots, x_i]$. Therefore, $p\in \varphi(A\cap R[x_1, \ldots, x_i])$ and $\varphi(A\cap R[x_1, \ldots, x_i])\subset \overline{A}\cap (R/I)[x_1, \ldots, x_i]$.
 \end{enumerate}
 
 \newpage
-\item[11.] I'll use proposition 42 in section 15.4. Since $D=R\setminus P$ in $R_P$, $P\cap D=\phi$. If $Q$ is a $P$-primary ideal of $R$, by proposition 42 (3), $^{c}(^{e}(Q))=Q$ in $R_P$. For the same reason, $P'\cap D=\phi$ if $P'\subset P$, and $D^{-1}P'$ is a prime in $R_P$. Also, $^{c}(^{e}(Q))=Q$ in $R_P$ for $P'$-primary $Q$.
+\item[11.] I'll use proposition 42 (3) in section 15.4. Since $D=R\setminus P$ in $R_P$, $P\cap D=\phi$. If $Q$ is a $P$-primary ideal of $R$, by proposition 42 (3), $^{c}(^{e}(Q))=Q$ in $R_P$. For the same reason, $P'\cap D=\phi$ if $P'\subset P$, and $D^{-1}P'$ is a prime in $R_P$. Also, $^{c}(^{e}(Q))=Q$ in $R_P$ for $P'$-primary $Q$.
 \newpage
 \item[19.] As $R$ is an integral domain with $1$, $R\setminus\{0\}$ is a multiplicative set containing $1$. Let $F=\text{Frac}(R)=R_{R\setminus\{0\}}$ be a fraction field of $R$. Then, $\text{Frac}(D^{-1}R)\simeq F$. ($D^{-1}R$ is integral domain: if $\frac{r_1}{d_1}\frac{r_2}{d_2}=0$, $dr_1r_2=0$ for some $d\in D$, but it means $r_1=0$ or $r_2=0$ and $\frac{r_1}{d_1}=0$ or $\frac{r_2}{d_2}=0$, which is contradiction. Therefore, we can define the fractional field fo $D^{-1}R$. Let $\Phi:F\rightarrow \text{Frac}(D^{-1}R)$ by $\Phi:\frac{r_1}{r_2}\mapsto \frac{\frac{r_1}{1}}{\frac{r_2}{1}}$. It is well-defined since if $\frac{r_1}{r_2}=\frac{r_3}{r_4}$, $r_1r_4-r_2r_4=0$ and it means $\frac{\frac{r_1}{1}}{\frac{r_2}{1}}=\frac{\frac{r_3}{1}}{\frac{r_4}{1}}$. Also, it is ring homomorphism since $\Phi\left(\frac{r_1}{r_2}+\frac{r_3}{r_4}\right)=\Phi\left(\frac{r_1r_4+r_2r_3}{r_2r_4}\right)= \frac{\frac{r_1r_4+r_2r_3}{1}}{\frac{r_2r_4}{1}}=\frac{\frac{r_1r_4}{1}+\frac{r_2r_3}{1}}{\frac{r_2r_4}{1}}=\frac{\frac{r_1}{1}}{\frac{r_2}{1}}+\frac{\frac{r_3}{1}}{\frac{r_4}{1}}=\Phi\left(\frac{r_1}{r_2}\right)+\Phi\left(\frac{r_3}{r_4}\right)$ and $\Phi\left(\frac{r_1}{r_2}\frac{r_3}{r_4}\right)=\frac{\frac{r_1r_3}{1}}{\frac{r_2r_4}{1}}=\frac{\frac{r_1}{1}}{\frac{r_2}{1}}\frac{\frac{r_3}{1}}{\frac{r_4}{1}}=\Phi\left(\frac{r_1}{r_2}\right)\Phi\left(\frac{r_3}{r_4}\right)$. Also, it is surjective since for any $\frac{\frac{r_1}{d_1}}{\frac{r_2}{d_2}}\in \text{Frac}(D^{-1}R)$, $\Phi\left(\frac{r_1d_2}{r_2d_1}\right)=\frac{\frac{r_1d_2}{1}}{\frac{r_2d_1}{1}}=\frac{\frac{r_1}{d_1}}{\frac{r_2}{d_2}}$ since $\frac{r_1d_2r_2}{d_2}=\frac{r_1r_2}{1}=\frac{r_1r_2d_1}{d_1}$. As a surjective field homomorphism, it is a field isomorphism, and $F$ and $\text{Frac}(D^{-1}R)$ is isomorphic.)
 
-Choose $\left(\frac{r_1}{d_1}\right)/\left(\frac{r_2}{d_2}\right)\in \text{Frac}(D^{-1}R)$. Since $R$ is integrally closed, there exists monic polynomial $p(x)=x^n+\sum\limits_{i=0}^{n-1}a_i x^i$, $a_i\in R$, such that $p\left(\frac{r_1d_2}{r_2d_1}\right)=0$. My claim is that $\pi(p(x))=\tilde{p}(x)=x^n+\sum\limits_{i=0}^{n-1}\pi(a_i) x^i\in D^{-1}R[x]$ has a root $\left(\frac{r_1}{d_1}\right)/\left(\frac{r_2}{d_2}\right)$. With the field isomorphism $\Phi$,
+Choose $\left(\frac{r_1}{d_1}\right)/\left(\frac{r_2}{d_2}\right)\in \text{Frac}(D^{-1}R)$. Since $R$ is integrally closed, there exists monic polynomial $p(x)=x^n+\sum\limits_{i=0}^{n-1}a_i x^i$, $a_i\in R$, such that $p\left(\frac{r_1d_2}{r_2d_1}\right)=0$. My claim is that $\pi(p(x))=\tilde{p}(x)=x^n+\sum\limits_{i=0}^{n-1}\pi(a_i) x^i\in D^{-1}R[x]$ has a root $\left(\frac{r_1}{d_1}\right)/\left(\frac{r_2}{d_2}\right)$.(Define $\pi:R\rightarrow D{^-1}R$, $\pi:r\mapsto \frac{r}{1}$.) With the field isomorphism $\Phi$,
 \begin{equation*}
 \begin{split}
 \Phi\left(\tilde{p}\left(\frac{\left(\frac{r_1}{d_1}\right)}{\left(\frac{r_2}{d_2}\right)}\right)\right)&=\Phi\left(\left(\frac{\left(\frac{r_1}{d_1}\right)}{\left(\frac{r_2}{d_2}\right)}\right)^n+\sum\limits_{i=0}^{n-1} \pi(a_i)\left(\frac{\left(\frac{r_1}{d_1}\right)}{\left(\frac{r_2}{d_2}\right)}\right)^{i}\right) \\
@@ -98,32 +98,32 @@ For $\varphi(t)$,
 D_{\varphi(t)}(f)(x,y,z)=(t^5s-2t^4y+t^3z, -3t^6x+t^5y+t^4z, -2t^7x-t^6y+2t^5z)
 \end{equation*}
 Computing $\Z\left(D_{\varphi(t)}(f)(x,y,z)\right)$, $\mathbb{T}_{(\varphi(t), W)}= \left(1, \frac{4}{3}t, \frac{5}{3}t^2\right)x$.
-If $w=0$, then $D_0(f)(x,y,z)=0$ and $\mathbb{T}_{(0, W)}=\mathbb{A}^3$. It describes all $\mathbb{T}_{(w, W)}$, $w\in W$ since $\varphi$ is set-theoretically bijective between $\mathbb{A}^1$ and $W$.
+If $w=0$, then $D_0(f)(x,y,z)=0$ and $\mathbb{T}_{(0, W)}=\mathbb{A}^3$. It describes all $\mathbb{T}_{w, W}$, $w\in W$ since $\varphi$ is set-theoretically bijective between $\mathbb{A}^1$ and $W$.
 
 Using previous exercise, for each $t\in \mathbb{A}^1$, $d\varphi:\mathbb{T}_{t, \mathbb{A}^1}\rightarrow \mathbb{T}_{\varphi(t),V}$ is given explicitly by
 \begin{equation*}
 d\varphi(a)=(D_t(t\varphi_1)(a), D_t(\varphi_2)(a), D_t(\varphi_3)(a))=(3t^2a, 4t^3a, 5t^4a)=3t^2\left(1, \frac{4}{3}t, \frac{5}{3}t^2\right)a
 \end{equation*}
-It shows that $d\phi$ is vector space isomorphism for $t\neq 0$. However, for $t=0$, $\mathbb{T}_{0, \mathbb{A}^1}=\mathbb{A}^1$, but $\mathbb{T}_{0, W)}=\mathbb{A}^3$ and $d\varphi(a)=0$.
+It shows that $d\phi$ is vector space isomorphism for $t\neq 0$. However, for $t=0$, $\mathbb{T}_{0, \mathbb{A}^1}=\mathbb{A}^1$, but $\mathbb{T}_{0, W}=\mathbb{A}^3$ and $d\varphi(a)=0$.
 
-Finally, assume that $V$ and $W$ are isomorphic and there exists isomorphism $\Phi$. Then, $d\Phi:\mathbb{T}_{t, \mathbb{A}^1}\rightarrow \mathbb{T}_{\varphi(t),V}$ should be isomorphism on $t=0$, but there can not exists such isomorphism between $\mathbb{A}^1$ and $\mathbb{A}^3$. Therefore, $V$ and $W$ are not isomorphic.
+Finally, assume that $V$ and $W$ are isomorphic and there exists isomorphism $\Phi$. Then, $d\Phi:\mathbb{T}_{t, \mathbb{A}^1}\rightarrow \mathbb{T}_{\varphi(t),V}$ should be isomorphism on $t=0$, but there can not exists such isomorphism between $\mathbb{A}^1$ and $\mathbb{A}^3$ at $w=0$. Therefore, $V$ and $W$ are not isomorphic.
 \newpage
 \item[35.] Let $P$ be a prime ideal in $R$ such that $P\cap D=\phi$ and $P\in \text{Ass}_R(M)$. First, $D^{-1}P$ is a prime ideal in $D^{-1}R$ by proposition 38 (3). Let an annihilated element in $R$ be $m$. Then, $R/P \simeq Rm$ since $P\in \text{Ass}_R(M)$ with annihilated element $m$.
 
-Consider an exact sequence such that $i$ is inclusion of $P$ into $R$ and $\varphi:R\rightarrow Rm$ by $r\mapsto rm$.
-\begin{figure}[h]
+Consider an exact sequence such that $i$ is inclusion of $P$ into $R$ and $\varphi:R\rightarrow Rm$ by $r\mapsto rm$. Since $D^{-1}R$ is a flat $R$-module, the following sequence is also exact.
+\begin{figure}[!h]
 \centering
 \begin{tikzcd}
     0\arrow{r} & P\arrow{r}{i} & R\arrow{r}{\varphi} & Rm\arrow{r} & 0
 \end{tikzcd}
 \end{figure}
-Since $D^{-1}R$ is a flat $R$-module, the following sequence is also exact.
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 \begin{tikzcd}
     0\arrow{r} & D^{-1}P\arrow{r}{1\otimes i} & D^{-1}R\arrow{r}{1\otimes \varphi} & D^{-1}(Rm)\arrow{r} & 0
 \end{tikzcd}
 \end{figure}
+
 Since $1\otimes \varphi: \frac{r}{d}\mapsto \frac{rm}{d}$, $\ker (1\otimes \varphi)=D^{-1}P$ means that $D^{-1}P$ is the annihilator of an element $\frac{m}{1}$, and $D^{-1}P\in \text{Ass}_{D^{-1}R}(D^{-1}M)$.
 \end{enumerate}
 \end{document}
