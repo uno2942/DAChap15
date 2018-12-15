@@ -79,14 +79,14 @@ Let $\bar{p}\in \overline{A}\cap (R/I)[x_1, \ldots, x_i]$ since $\overline{A}\ca
 \newpage
 \item[19.] As $R$ is an integral domain with $1$, $R\setminus\{0\}$ is a multiplicative set containing $1$. Let $F=\text{Frac}(R)=R_{R\setminus\{0\}}$ be a fraction field of $R$. Then, $\text{Frac}(D^{-1}R)\simeq F$. ($D^{-1}R$ is integral domain: if $\frac{r_1}{d_1}\frac{r_2}{d_2}=0$, $dr_1r_2=0$ for some $d\in D$, but it means $r_1=0$ or $r_2=0$ and $\frac{r_1}{d_1}=0$ or $\frac{r_2}{d_2}=0$, which is contradiction. Therefore, we can define the fractional field fo $D^{-1}R$. Let $\Phi:F\rightarrow \text{Frac}(D^{-1}R)$ by $\Phi:\frac{r_1}{r_2}\mapsto \frac{\frac{r_1}{1}}{\frac{r_2}{1}}$. It is well-defined since if $\frac{r_1}{r_2}=\frac{r_3}{r_4}$, $r_1r_4-r_2r_4=0$ and it means $\frac{\frac{r_1}{1}}{\frac{r_2}{1}}=\frac{\frac{r_3}{1}}{\frac{r_4}{1}}$. Also, it is ring homomorphism since $\Phi\left(\frac{r_1}{r_2}+\frac{r_3}{r_4}\right)=\Phi\left(\frac{r_1r_4+r_2r_3}{r_2r_4}\right)= \frac{\frac{r_1r_4+r_2r_3}{1}}{\frac{r_2r_4}{1}}=\frac{\frac{r_1r_4}{1}+\frac{r_2r_3}{1}}{\frac{r_2r_4}{1}}=\frac{\frac{r_1}{1}}{\frac{r_2}{1}}+\frac{\frac{r_3}{1}}{\frac{r_4}{1}}=\Phi\left(\frac{r_1}{r_2}\right)+\Phi\left(\frac{r_3}{r_4}\right)$ and $\Phi\left(\frac{r_1}{r_2}\frac{r_3}{r_4}\right)=\frac{\frac{r_1r_3}{1}}{\frac{r_2r_4}{1}}=\frac{\frac{r_1}{1}}{\frac{r_2}{1}}\frac{\frac{r_3}{1}}{\frac{r_4}{1}}=\Phi\left(\frac{r_1}{r_2}\right)\Phi\left(\frac{r_3}{r_4}\right)$. Also, it is surjective since for any $\frac{\frac{r_1}{d_1}}{\frac{r_2}{d_2}}\in \text{Frac}(D^{-1}R)$, $\Phi\left(\frac{r_1d_2}{r_2d_1}\right)=\frac{\frac{r_1d_2}{1}}{\frac{r_2d_1}{1}}=\frac{\frac{r_1}{d_1}}{\frac{r_2}{d_2}}$ since $\frac{r_1d_2r_2}{d_2}=\frac{r_1r_2}{1}=\frac{r_1r_2d_1}{d_1}$. As a surjective field homomorphism, it is a field isomorphism, and $F$ and $\text{Frac}(D^{-1}R)$ is isomorphic.)
 
-Choose $\left(\frac{r_1}{d_1}\right)/\left(\frac{r_2}{d_2}\right)\in \text{Frac}(D^{-1}R)$. Since $R$ is integrally closed, there exists monic polynomial $p(x)=x^n+\sum\limits_{i=0}^{n-1}a_i x^i$, $a_i\in R$, such that $p\left(\frac{r_1d_2}{r_2d_1}\right)=0$. My claim is that $\pi(p(x))=\tilde{p}(x)=x^n+\sum\limits_{i=0}^{n-1}\pi(a_i) x^i\in D^{-1}R[x]$ has a root $\left(\frac{r_1}{d_1}\right)/\left(\frac{r_2}{d_2}\right)$.(Define $\pi:R\rightarrow D{^-1}R$, $\pi:r\mapsto \frac{r}{1}$.) With the field isomorphism $\Phi$,
+Choose $\left(\frac{r_1}{d_1}\right)/\left(\frac{r_2}{d_2}\right)\in \text{Frac}(D^{-1}R)$. Since $R$ is integrally closed, there exists monic polynomial $p(x)=x^n+\sum\limits_{i=0}^{n-1}a_i x^i$, $a_i\in R$, such that $p\left(\frac{r_1d_2}{r_2d_1}\right)=0$. My claim is that $\pi(p(x))=\tilde{p}(x)=x^n+\sum\limits_{i=0}^{n-1}\pi(a_i) x^i\in D^{-1}R[x]$ has a root $\left(\frac{r_1}{d_1}\right)/\left(\frac{r_2}{d_2}\right)$.(Define $\pi:R\rightarrow D{^-1}R$, $\pi:r\mapsto \frac{r}{1}$.) With the field isomorphism $\Phi^{-1}$,
 \begin{equation*}
 \begin{split}
-\Phi\left(\tilde{p}\left(\frac{\left(\frac{r_1}{d_1}\right)}{\left(\frac{r_2}{d_2}\right)}\right)\right)&=\Phi\left(\left(\frac{\left(\frac{r_1}{d_1}\right)}{\left(\frac{r_2}{d_2}\right)}\right)^n+\sum\limits_{i=0}^{n-1} \pi(a_i)\left(\frac{\left(\frac{r_1}{d_1}\right)}{\left(\frac{r_2}{d_2}\right)}\right)^{i}\right) \\
+\Phi^{-1}\left(\tilde{p}\left(\frac{\left(\frac{r_1}{d_1}\right)}{\left(\frac{r_2}{d_2}\right)}\right)\right)&=\Phi^{-1}\left(\left(\frac{\left(\frac{r_1}{d_1}\right)}{\left(\frac{r_2}{d_2}\right)}\right)^n+\sum\limits_{i=0}^{n-1} \pi(a_i)\left(\frac{\left(\frac{r_1}{d_1}\right)}{\left(\frac{r_2}{d_2}\right)}\right)^{i}\right) \\
 &=\left(\frac{r_1d_2}{r_2d_1}\right)^n+\sum\limits_{i=0}^{n-1}\frac{a_i}{1}\left(\frac{r_1d_2}{r_2d_1}\right)^i=0
 \end{split}
 \end{equation*}
-sine $p\left(\frac{r_1d_2}{r_2d_1}\right)=0$. Since $\Phi$ is isomorphism, it means that $\left(\frac{r_1}{d_1}\right)/\left(\frac{r_2}{d_2}\right)$ is integral over $D^{-1}R$ and $D^{-1}R$ is integrally closed.
+since $p\left(\frac{r_1d_2}{r_2d_1}\right)=0$. Since $\Phi$ is isomorphism, it means that $\left(\frac{r_1}{d_1}\right)/\left(\frac{r_2}{d_2}\right)$ is integral over $D^{-1}R$ and $D^{-1}R$ is integrally closed.
 \newpage
 \item[27.]
 First, I'll compute $\mathbb{T}_{t, V}$, $\mathbb{T}_{(w_1, w_2, w_3), W}$. Since $V=I(0)$, $D_v(0)=0$ and $\mathbb{T}_{t, V}=\mathbb{A}^1$. If $w=(w_1, w_2, w_3)\neq 0$,
@@ -120,10 +120,10 @@ Consider an exact sequence such that $i$ is inclusion of $P$ into $R$ and $\varp
 \begin{figure}[!h]
 \centering
 \begin{tikzcd}
-    0\arrow{r} & D^{-1}P\arrow{r}{1\otimes i} & D^{-1}R\arrow{r}{1\otimes \varphi} & D^{-1}(Rm)\arrow{r} & 0
+    0\arrow{r} & D^{-1}P\arrow{r}{1\otimes i} & D^{-1}R\arrow{r}{1\otimes \varphi} & D^{-1}(Rm)\arrow{r} & 0.
 \end{tikzcd}
 \end{figure}
 
-Since $1\otimes \varphi: \frac{r}{d}\mapsto \frac{rm}{d}$, $\ker (1\otimes \varphi)=D^{-1}P$ means that $D^{-1}P$ is the annihilator of an element $\frac{m}{1}$, and $D^{-1}P\in \text{Ass}_{D^{-1}R}(D^{-1}M)$.
+$1\otimes \varphi: \frac{r}{d}\mapsto \frac{rm}{d}$, $\ker (1\otimes \varphi)=D^{-1}P$ means that $D^{-1}P$ is the annihilator of the element $\frac{m}{1}$ in $D^{-1}R$, and $D^{-1}P\in \text{Ass}_{D^{-1}R}(D^{-1}M)$.
 \end{enumerate}
 \end{document}
